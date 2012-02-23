@@ -22,7 +22,7 @@ class TC_MyTest < Test::Unit::TestCase
     assert_equal ({'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1}), count_words("A man, a plan, a canal -- Panama")
   end
 
-  def test_count_
+  def test_count_doo
     assert_equal ({'doo' => 3, 'bee' => 2}), count_words("Doo bee doo bee doo") 
   end 
 end
