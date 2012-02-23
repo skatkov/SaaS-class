@@ -35,6 +35,6 @@ end
 
 def count_words(string)
   h = Hash.new
-  string.downcase.gsub(/\W/, " ").split(/\b/).each {|str| h.key?(str)? h[str] += 1 : h[str] = 1 if !str.strip.empty? }    
+  string.downcase.split(/\W/).each {|str| h.key?(str)? h[str] += 1 : h[str] = 1 if !str.empty? }
   return h
 end
