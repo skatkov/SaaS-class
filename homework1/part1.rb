@@ -3,8 +3,7 @@
 
 require 'test/unit'
 
-class TC_MyTest < Test::Unit::TestCase
-  
+class TC_MyTest < Test::Unit::TestCase 
 
   def test_panama_true
     assert palindrome?("A man, a plan, a canal -- Panama")
@@ -36,8 +35,6 @@ end
 
 def count_words(string)
   h = Hash.new
-  for str in string.downcase.gsub(/\W/, " ").split(/\b/)
-    if !str.strip.empty? then h.key?(str)? h[str] += 1 : h[str] = 1 end    
-  end 
+  string.downcase.gsub(/\W/, " ").split(/\b/).each {|str| h.key?(str)? h[str] += 1 : h[str] = 1 if !str.strip.empty? }    
   return h
 end
