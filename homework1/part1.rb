@@ -37,14 +37,7 @@ end
 def count_words(string)
   h = Hash.new
   for str in string.downcase.gsub(/\W/, " ").split(/\b/)
-    if !str.strip.empty? then
-      if h.key?(str) then
-        h[str] += 1
-      else
-        h[str] = 1
-      end
-    end
-    
+    if !str.strip.empty? then h.key?(str)? h[str] += 1 : h[str] = 1 end    
   end 
   return h
 end
