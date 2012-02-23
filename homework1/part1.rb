@@ -19,11 +19,11 @@ class TC_MyTest < Test::Unit::TestCase
   end
 
   def test_count_panama
-    assert_equal ['a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1], count_words("A man, a plan, a canal -- Panama")
+    assert_equal ({'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1}), count_words("A man, a plan, a canal -- Panama")
   end
 
   def test_count_
-    assert_equal ['doo' => 3, 'bee' => 2], count_words("Doo bee doo bee doo") 
+    assert_equal ({'doo' => 3, 'bee' => 2}), count_words("Doo bee doo bee doo") 
   end 
 end
 
@@ -35,5 +35,16 @@ def palindrome?(string)
 end
 
 def count_words(string)
-  puts "str:" + string.downcase.gsub(/\b/, "")
+  h = Hash.new
+  for str in string.downcase.gsub(/\W/, " ").split(/\b/)
+    if !str.strip.empty? then
+      if h.key?(str) then
+        h[str] += 1
+      else
+        h[str] = 1
+      end
+    end
+    
+  end 
+  return h
 end
