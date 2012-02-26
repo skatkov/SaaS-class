@@ -30,12 +30,9 @@ class TC_MyTest < Test::Unit::TestCase
     assert_equal ["Armando", "S"], rps_game_winner([["Urmas", "P"], ["Armando", "S"]])
   end 
 
-  def test_tournament
-
-    assert_equal ["Richard", "R"], tournament([[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
+  def test_rps_seminament_winner
+    assert_equal ["Richard", "R"], rps_seminament_winner([[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
 ],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]])
-
-
   end  
       
   #pobochnqe unit testq
@@ -53,8 +50,16 @@ class NoSuchStrategyError < StandardError ; end
 
 
 
-def tournament(tournamentEntry)
-  rps_game_winner(rps_game_winner(tournamentEntry[0]).concat(rps_game_winner(tournamentEntry[1])))
+def rps_seminament_winner(tournamentEntry)
+  finals = []
+   tournamentEntry.each {|semi|
+    semiFinals = []
+     semi.each {|fight|
+        semiFinals += [rps_game_winner(fight)]
+     }
+     finals += [rps_game_winner(semiFinals)]
+   }
+  rps_game_winner(finals)  
 end
 
 def rps_game_winner(game)
