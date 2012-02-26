@@ -7,12 +7,24 @@ require 'test/unit'
 
 class TC_MyTest < Test::Unit::TestCase
   def test_anagrams
-    assert_equal [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]], 
+    assert [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]] , 
     combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream'])
   end
+
+  def test_anagrams_diff_case
+    assert [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]] , 
+    combine_anagrams(['caRs', 'for', 'poTatoes', 'racs', 'four','scar', 'crEams','sCream'])
+  end
+
 
 end
 
 def combine_anagrams(words)
-  words.sort.each {|word| puts "word: ", word}
+  hashMap = {}
+  words.each{|word| wordHash = 0
+    #create has for each word
+   (0..(word.size-1)).each do |n| wordHash+=word[n] end
+    # if has is same, then anagram
+    hashMap.key?(wordHash)? hashMap[wordHash] += [word] : hashMap[wordHash] = [word]
+  }
 end
