@@ -1,13 +1,3 @@
-# input: ['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams',
-'scream']
-# => output: [["cars", "racs", "scar"], ["four"], ["for"],
-["potatoes"], ["creams", "scream"]]
-# HINT: you can quickly tell if two words are anagrams by sorting their
-# letters, keeping in mind that upper vs lowercase doesn't matter
-def combine_anagrams(words)
-#
-<YOUR CODE HERE>
-end
 # input: ['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream']
 # => output: [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]]
 # HINT: you can quickly tell if two words are anagrams by sorting their
@@ -24,5 +14,5 @@ class TC_MyTest < Test::Unit::TestCase
 end
 
 def combine_anagrams(words)
-#<YOUR CODE HERE>
+  words.sort.each {|word| puts "word: ", word}
 end
