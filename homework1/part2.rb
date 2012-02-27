@@ -37,11 +37,11 @@ class TC_MyTest < Test::Unit::TestCase
       
   #pobochnqe unit testq
   def test_evaluate_option_false
-  	assert_equal false, correctMoves?([["Armando", "S"], ["Urmas", "A"]], {"S" => 1, "R" => 2 , "P" => 3})
+  	assert_equal false, correctStrategy?([["Armando", "S"], ["Urmas", "A"]], {"S" => 1, "R" => 2 , "P" => 3})
   end
 
   def test_evaluate_option_true
-    assert correctMoves?([["Armando", "S"], ["Urmas", "P"]], {"S" => 1, "R" => 2 , "P" => 3}) 
+    assert correctStrategy?([["Armando", "S"], ["Urmas", "P"]], {"S" => 1, "R" => 2 , "P" => 3}) 
   end
 end
 
@@ -65,7 +65,7 @@ end
 def rps_game_winner(game)
 	possibleValues = {"S" => 1, "R" => 2 , "P" => 3}
   raise WrongNumberOfPlayersError unless game.length == 2
-  raise NoSuchStrategyError unless correctMoves?(game,  possibleValues)
+  raise NoSuchStrategyError unless correctStrategy?(game,  possibleValues)
 
   if possibleValues[game[0][1]].eql?(1) & possibleValues[game[1][1]].eql?(3) then
     return game[0]
@@ -76,7 +76,7 @@ def rps_game_winner(game)
   end
 end
 
-def correctMoves?(gameAnswer, possibleValues)
+def correctStrategy?(gameAnswer, possibleValues)
 	gameAnswer.each {|playerMove| return false if !possibleValues.key?(playerMove[1])}
 	return true
 end

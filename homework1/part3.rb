@@ -8,15 +8,24 @@ class TC_MyTest < Test::Unit::TestCase
     assert_equal 5, combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream']).size
   end
 
-  # FIXME: actually, these work as requested, just order is incorrect. 
   def test_anagrams
-    assert_equal [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]] , 
-    combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream'])
+    anagrams = ['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams', 'scream']
+    expected = [['cars', 'racs', 'scar'], ['four'], ['for'], ['potatoes'], ['creams', 'scream']
+        ].sort
+
+    # Order does not matter
+    groups = combine_anagrams(anagrams).sort
+    groups.each_with_index { |g, i| assert_equal expected[i].sort, g.sort }
   end
 
   def test_anagrams_diff_case
-    assert_equal [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]] , 
-    combine_anagrams(['caRs', 'for', 'poTatoes', 'racs', 'four','scar', 'crEams','sCream'])
+    anagrams = ['Cars', 'for', 'Potatoes', 'racs', 'Four','SCAR', 'creams', 'scream']
+    expected = [['Cars', 'racs', 'SCAR'], ['Four'], ['for'], ['Potatoes'], ['creams', 'scream']
+        ].sort
+
+    # Order does not matter
+    groups = combine_anagrams(anagrams).sort
+    groups.each_with_index { |g, i| assert_equal expected[i].sort, g.sort }
   end
 end
 
