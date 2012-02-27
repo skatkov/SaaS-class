@@ -29,11 +29,25 @@ class TC_MyTest < Test::Unit::TestCase
   def test_scissors_winner_reverse
     assert_equal ["Armando", "S"], rps_game_winner([["Urmas", "P"], ["Armando", "S"]])
   end 
+  
 
   def test_rps_tournament_winner
     assert_equal ["Richard", "R"], rps_tournament_winner([[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
 ],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]])
-  end  
+  end 
+
+  def test_rps_tournament_winner2
+    assert_equal ["Richard", "R"], rps_tournament_winner(
+        [[["Armando", "P"], ["Dave", "S"]] , [["Richard", "R"], ["Michael", "S"]]]
+      )
+  end
+
+  def test_rps_tournament_winner3
+    assert_equal ["Richard", "R"], rps_tournament_winner(
+      [[[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
+],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]], [[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
+],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]]])
+  end
       
   #pobochnqe unit testq
   def test_evaluate_option_false
@@ -51,21 +65,17 @@ class NoSuchStrategyError < StandardError ; end
 
 
 def rps_tournament_winner(tournamentEntry)
-  finals = []
-   tournamentEntry.each {|semi|
-    semiFinals = []
-     semi.each {|fight|
-        semiFinals += [rps_game_winner(fight)]
-     }
-     finals += [rps_game_winner(semiFinals)]
-   }
-  rps_game_winner(finals)  
+  begin
+    rps_game_winner(tournamentEntry)
+  rescue
+    rps_tournament_winner([rps_tournament_winner(tournamentEntry[0]), rps_tournament_winner(tournamentEntry[1])])
+  end
 end
 
 def rps_game_winner(game)
 	possibleValues = {"S" => 1, "R" => 2 , "P" => 3}
   raise WrongNumberOfPlayersError unless game.length == 2
-  raise NoSuchStrategyError unless correctStrategy?(game,  possibleValues)
+  raise NoSuchStrategyError unless correctStrategy?(game, possibleValues)
 
   if possibleValues[game[0][1]].eql?(1) & possibleValues[game[1][1]].eql?(3) then
     return game[0]
