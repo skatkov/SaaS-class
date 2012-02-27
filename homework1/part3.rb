@@ -2,6 +2,13 @@
 require 'test/unit'
 
 class TC_MyTest < Test::Unit::TestCase
+
+
+  def test_anagrams_size
+    assert_equal 5, combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream']).size
+  end
+
+  # FIXME: actually, these work as requested, just order is incorrect. 
   def test_anagrams
     assert_equal [["cars", "racs", "scar"], ["four"], ["for"],["potatoes"], ["creams", "scream"]] , 
     combine_anagrams(['cars', 'for', 'potatoes', 'racs', 'four','scar', 'creams','scream'])
