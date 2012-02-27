@@ -13,6 +13,26 @@ class TC_MyTest < Test::Unit::TestCase
     assert palindrome?("Madam, I'm Adam!")
   end
 
+  def test_ivan_true
+    assert palindrome?("'Tis Ivan on a visit")
+  end
+
+  def test_eden
+    assert palindrome?("Madam in Eden, I'm Adam")
+  end
+
+  def test_salami
+    assert palindrome?("Go hang a salami! I'm a lasagna hog!")
+  end
+
+  def test_fatness
+    assert palindrome?("Doc Note: I dissent. A fast never prevents a fatness. I diet on cod!")
+  end
+
+  def test_new_era
+    assert palindrome?("Are we not drawn onward, we few, drawn onward to new era?")
+  end
+
   def test_abracadabra_false
     assert_equal false, palindrome?("Abracadabra") 
   end
