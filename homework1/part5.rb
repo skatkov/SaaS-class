@@ -3,18 +3,19 @@ class Class
 	attr_name = attr_name.to_s   # make sure it's a string
 	attr_reader attr_name        # create the attribute's getter
 	attr_reader attr_name+"_history" # create bar_history getter
-	class_eval do
-            
-      define_method(attr_name + "=" ) do |x|
+	class_eval %Q{
+		define_method(attr_name + "=" ) do |x|
         @history = Array.new().push(nil) if !defined? @history
         @history.push(x)
       end
       
       define_method(attr_name + "_history") do
         return @history
-      end
+      end    
+
+	}
+            
       
-    end
   end
 end
 
