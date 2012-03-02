@@ -5,11 +5,8 @@ class Class
 	attr_reader attr_name+"_history" # create bar_history getter
 	class_eval %Q{
 		define_method(attr_name + "=" ) do |x|
-			if !defined?(@history) then
-				@history = Array.new().push(nil).push(x)
-			else
-				@history.push(x)
-			end
+			@history = Array.new().push(nil) if !defined? @history
+			@history.push(x)
 		end
 
 		define_method(attr_name + "_history") do
@@ -39,7 +36,7 @@ class TC_MyTest < Test::Unit::TestCase
 		f     = Foo.new
 		f.bar = 1
 		f.bar = 2
-		f = Foo.new
+		f     = Foo.new
 		f.bar = 3
 		assert_equal [nil,3], f.bar_history
 	end
