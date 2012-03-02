@@ -5,7 +5,12 @@ class Class
 	attr_reader attr_name+"_history" # create bar_history getter
 	class_eval %Q{
 		define_method(attr_name + "=" ) do |x|
-			@history = Hash[attr_name, Array.new().push(nil)] if !defined? @history
+			if !defined? @history then
+				@history = Hash[attr_name, Array.new().push(nil)]
+			elsif !@history.key?(attr_name) then
+				@history[attr_name] = Array.new().push(nil)
+			end
+
 			@history[attr_name].push(x)
 		end
 
@@ -13,7 +18,7 @@ class Class
 			return @history[attr_name]
 		end    
 	}
-end
+	end
 end
 
 class Foo
