@@ -27,19 +27,22 @@ class TC_MyTest < Test::Unit::TestCase
     groups = combine_anagrams(anagrams).sort
     groups.each_with_index { |g, i| assert_equal expected[i].sort, g.sort }
   end
+
+  def test_simpleHash
+    assert_equal 218, "ok".simpleHash
+
+  end
 end
 
 def combine_anagrams(words)
   hashMap = {}
-  words.each{|word| wordHash = generateHash(word)
-    # if has is same, then anagram
-    hashMap.key?(wordHash)? hashMap[wordHash] += [word] : hashMap[wordHash] = [word]
-  }
+  words.each{|word| hashMap.key?(word.simpleHash)? hashMap[word.simpleHash] += [word] : hashMap[word.simpleHash] = [word] }
   return hashMap.values
 end
 
-def generateHash(word)
-  wordHash = 0
-  (0..(word.size-1)).each do |n| wordHash+=word.downcase[n].ord end
-  return wordHash
+class String
+  def simpleHash
+    wordHash = 0; (0..(self.size-1)).each{|n| wordHash+=self.downcase[n].ord}
+    return wordHash
+  end
 end
