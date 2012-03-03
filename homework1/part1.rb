@@ -50,7 +50,7 @@ end
 
 def palindrome?(string)
   str = string.downcase.gsub(/(\s|\W)/, "")
-    return str.reverse.eql?(str) 
+  str.reverse.eql?(str) 
 end
 
 def count_words(string)
