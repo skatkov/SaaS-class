@@ -54,7 +54,5 @@ def palindrome?(string)
 end
 
 def count_words(string)
-  h = Hash.new
-  string.downcase.split(/\W/).each {|str| h.key?(str)? h[str] += 1 : h[str] = 1 if !str.empty? }
-  return h
+  string.downcase.split(/\W+/).inject(Hash.new) {|h, str| h.key?(str)? h[str] += 1 : h[str] = 1; h}
 end
