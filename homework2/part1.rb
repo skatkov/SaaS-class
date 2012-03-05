@@ -35,6 +35,6 @@ end
 
 module Enumerable
 	def palindrome?
-		self.to_s.palindrome?		
+		self.to_s.palindrome?
 	end
 end
