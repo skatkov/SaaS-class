@@ -31,23 +31,7 @@ class TC_MyTest < Test::Unit::TestCase
   end 
   
 
-  def test_rps_tournament_winner
-    assert_equal ["Richard", "R"], rps_tournament_winner([[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
-],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]])
-  end 
 
-  def test_rps_tournament_winner2
-    assert_equal ["Richard", "R"], rps_tournament_winner(
-        [[["Armando", "P"], ["Dave", "S"]] , [["Richard", "R"], ["Michael", "S"]]]
-      )
-  end
-
-  def test_rps_tournament_winner3
-    assert_equal ["Richard", "R"], rps_tournament_winner(
-      [[[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
-],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]], [[[ ["Armando", "P"], ["Dave", "S"] ],[ ["Richard", "R"], ["Michael", "S"] ],
-],[[ ["Allen", "S"], ["Omer", "P"] ], [ ["David E.", "R"], ["Richard X.", "P"] ] ]]])
-  end
       
   #pobochnqe unit testq
   def test_evaluate_option_false
