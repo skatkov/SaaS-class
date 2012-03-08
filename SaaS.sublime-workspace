@@ -1,0 +1,760 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"as",
+				"as	assert(..)"
+			],
+			[
+				"cl",
+				"cla	class BlankSlate .. initialize .. end"
+			],
+			[
+				"check",
+				"checkArray"
+			],
+			[
+				"en",
+				"end"
+			],
+			[
+				"clas",
+				"class"
+			],
+			[
+				"i",
+				"in"
+			],
+			[
+				"assert",
+				"assert_equal"
+			],
+			[
+				"attr",
+				"attr_name"
+			],
+			[
+				"att",
+				"attr_name"
+			],
+			[
+				"mu",
+				"multi_history"
+			],
+			[
+				"col",
+				"col	collect { |e| .. }"
+			],
+			[
+				"ins",
+				"inspect  (function)"
+			],
+			[
+				"b",
+				"br"
+			],
+			[
+				"div",
+				"<div>${1001:$SELECTION}</div>"
+			],
+			[
+				"ba",
+				"background	background-color: transparent"
+			],
+			[
+				"f1",
+				"f1"
+			],
+			[
+				"set",
+				"setProperty"
+			],
+			[
+				"property",
+				"propertyNames"
+			],
+			[
+				"proper",
+				"propertyNames"
+			],
+			[
+				"app",
+				"appCategory"
+			],
+			[
+				"ap",
+				"appCategory"
+			],
+			[
+				"edu",
+				"education"
+			],
+			[
+				"li",
+				"lifestyle"
+			],
+			[
+				"m",
+				"music"
+			],
+			[
+				"pro",
+				"productivity"
+			],
+			[
+				"pr",
+				"productivity"
+			],
+			[
+				"gam",
+				"games"
+			],
+			[
+				"ga",
+				"games"
+			],
+			[
+				"game",
+				"games"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/**\n * ethanschoonover.com master css file\n * fold in vim to view only the non html5boilerplate components\n *\n * style.css contains a reset, font normalization and some base styles. {{{\n *\n * See html5boilerplate.com for the base css file\n * Credit is left where credit is due.\n * Much inspiration was taken from these projects:\n * - yui.yahooapis.com/2.8.1/build/base/base.css\n * - camendesign.com/design/\n * - praegnanz.de/weblog/htmlcssjs-kickstart\n */\n\n\n/**\n * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)\n * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark\n * html5doctor.com/html-5-reset-stylesheet/\n */\n\nhtml, body, div, span, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\nabbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,\nsmall, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block;\n}\n\nblockquote, q { quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after { content: ''; content: none; }\n\nins { background-color: #ff9; color: #000; text-decoration: none; }\n\nmark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }\n\ndel { text-decoration: line-through; }\n\nabbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }\n\ntable { border-collapse: collapse; border-spacing: 0; }\n\nhr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }\n\ninput, select { vertical-align: middle; }\n\n\n/**\n * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/\n */\n\n//body { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */\nbody { font:16px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */\nselect, input, textarea, button { font:99% sans-serif; }\n\n/* Normalize monospace sizing:\n   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */\npre, code, kbd, samp { font-family: monospace, sans-serif; }\n\n\n/**\n * Minimal base styles.\n */\n\n/* Always force a scrollbar in non-IE */\nhtml { overflow-y: scroll; }\n\n/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */\na:hover, a:active { outline: none; }\n\nul, ol { margin-left: 2em; }\nol { list-style-type: decimal; }\n\n/* Remove margins for navigation lists */\nnav ul, nav li { margin: 0; list-style:none; list-style-image: none; }\n\nsmall { font-size: 85%; }\nstrong, th { font-weight: bold; }\n\ntd { vertical-align: top; }\n\n/* Set sub, sup without affecting line-height: gist.github.com/413930 */\nsub, sup { font-size: 75%; line-height: 0; position: relative; }\nsup { top: -0.5em; }\nsub { bottom: -0.25em; }\n\npre {\n  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */\n  white-space: pre; white-space: pre-wrap; word-wrap: break-word;\n  padding: 15px;\n}\n\ntextarea { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */\n\n.ie6 legend, .ie7 legend { margin-left: -7px; } \n\n/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */\ninput[type=\"radio\"] { vertical-align: text-bottom; }\ninput[type=\"checkbox\"] { vertical-align: bottom; }\n.ie7 input[type=\"checkbox\"] { vertical-align: baseline; }\n.ie6 input { vertical-align: text-bottom; }\n\n/* Hand cursor on clickable input elements */\nlabel, input[type=\"button\"], input[type=\"submit\"], input[type=\"image\"], button { cursor: pointer; }\n\n/* Webkit browsers add a 2px margin outside the chrome of form elements */\nbutton, input, select, textarea { margin: 0; }\n\n/* Colors for form validity */\ninput:valid, textarea:valid   {  }\ninput:invalid, textarea:invalid {\n   border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red;\n}\n.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }\n\n\n/* These selection declarations have to be separate\n   No text-shadow: twitter.com/miketaylr/status/12228805301\n   Also: hot pink! */\n::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }\n::selection { background:#FF5E99; color:#fff; text-shadow: none; }\n\n/* j.mp/webkit-tap-highlight-color */\na:link { -webkit-tap-highlight-color: #FF5E99; }\n\n/* Make buttons play nice in IE:\n   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */\nbutton {  width: auto; overflow: visible; }\n\n/* Bicubic resizing for non-native sized IMG:\n   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */\n.ie7 img { -ms-interpolation-mode: bicubic; }\n\n/**\n * You might tweak these..\n */\n\nbody, select, input, textarea {\n  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */\n  color: #444;\n  /* Set your base font here, to apply evenly */\n  /* font-family: Georgia, serif;  */\n}\n\n/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */\nh1, h2, h3, h4, h5, h6 { font-weight: bold; }\n\na, a:active, a:visited { color: #607890; }\na:hover { color: #036; }\n\n// }}}\n\n/**\n * Primary styles (custom section, non htmlboilerplate)\n * Author: Ethan Schoonover\n */\n\n$base03:    #002b36;\n$base02:    #073642;\n$base01:    #586e75;\n$base00:    #657b83;\n$base0:     #839496;\n$base1:     #93a1a1;\n$base2:     #eee8d5;\n$base3:     #fdf6e3;\n$yellow:    #b58900;\n$orange:    #cb4b16;\n$red:       #dc322f;\n$magenta:   #d33682;\n$violet:    #6c71c4;\n$blue:      #268bd2;\n$cyan:      #2aa198;\n$green:     #859900;\n$fontstack: \"ff-din-web-pro-1\",\"ff-din-web-pro-2\",sans-serif;\n$hmargin:   70px;\n$vmargin:   20px;\n\n/*\nFont Sizing Hack via\nhttp://html5boilerblate.com and\nhttp://developer.yahoo.com/yui/fonts/\n=====================================\ntarget size     Declare this\nin pixels (px)  percent (%)\n10              77\n11              85\n12              93 (was 93)\n13              100\n14              108 (was 107)\n15              116 (was 114)\n16              123.1 (was 122)\n17              131 (was 129)\n18              138.5 (was 136)\n19              146.5 (was 144)\n20              153.9 (was 152)\n21              161.6 (was 159)\n22              167\n23              174\n24              182\n25              189\n26              197\n*/\nhtml * {\n    font-family: $fontstack;\n}\nhtml > * {\n    //font-size: 123.1%;\n}\np,dt,li {\n    //font-size: 146.5%;\n    //font-size: 153.9%;\n}\np {\n    font-family: $fontstack;\n    font-weight: lighter;\n    margin: 0 0 $vmargin 0;\n}\nstrong { font-weight: bold; }\nem { }\nol,ul {\n    margin-bottom: $vmargin;\n}\nli {\n    margin-bottom: $vmargin/2;\n}\nli p {\n   //margin-bottom: $vmargin/5;\n}\nli > p:first-of-type {\n    //margin-bottom: $vmargin/2;\n}\nli > p:last-of-type {\n    //margin-bottom: $vmargin;\n}\ndt {\n    font-weight: bold;\n}\ndd {\n    margin-left: $hmargin/2;\n}\nh1,h2,h3,h4,h5,h6 {\n    font-family: $fontstack;\n    font-weight: lighter;\n    text-transform: capitalize;\n    margin-top:$vmargin*2;\n    margin-bottom:$vmargin;\n}\nh1 {\n    text-transform: uppercase;\n    font-weight: bold;\n    border-bottom:1px solid;\n}\nh2 {\n    border-bottom:1px solid;\n}\nh3,h4,h5,h6 {\n    border-bottom:none;\n}\nh1#pagetitle, h1:first-of-type {\n    font-size: 700%;\n    //font-size: 600%;\n    margin-top:0;\n    margin-bottom:$vmargin;\n    line-height: 100%;\n    border: none;\n    text-decoration: none;\n}\nh2#pagesubtitle, h2:first-of-type {\n    font-weight: lighter;\n    font-size: 200%;\n    text-transform: none;\n    color: $base01;\n    margin-top:$vmargin;\n    margin-bottom:$vmargin*2;\n    line-height: 100%;\n    border: none;\n}\n/*\nh1 { font-size: 153.9% }      //26px\nh2 { font-size: 153.9% }      //23px\nh3 { font-size: 146.5% }    //20px\nh4 { font-size: 138.5% }      //18px\nh5 { font-size: 138.5% }      //18px\nh6 { font-size: 138.5% }      //18px\n*/\nh1 { font-size: 153.9% }      //26px\nh2 { font-size: 153.9% }      //23px\nh3 { font-size: 146.5% }    //20px\nh4 { font-size: 138.5% }      //18px\nh5 { font-size: 138.5% }      //18px\nh6 { font-size: 138.5% }      //18px\nimg { margin: 0 0 $vmargin 0; }\nheader {\n    //font-size: 123.1% ;\n    line-height: 190%;\n    a {\n        text-decoration:none;\n        margin-right: 10px;\n    }\n}\nfooter {\n    padding-left:$hmargin;\n    //background-color:$base02;\n    line-height:200%;\n    //position:absolute;\n    //bottom:0;\n    padding-right:1em;\n}\n#main {\n    margin-left:$hmargin;\n    margin-right:$hmargin;\n    margin-top:$vmargin*2;\n    margin-bottom:$vmargin*2;\n    //min-width: 52em; // sufficient for 80 char pre blocks\n    min-width: 32em; // sufficient for 72 char pre blocks\n    max-width: 52em;\n}\n#sitelink{\n    display:block;\n    float:left;\n    width: $hmargin - 10px;\n    padding-left: 10px;\n}\npre {\n    margin-bottom:$vmargin;\n}\npre, code {\n    font-family: monospace;\n}\npre {\n}\n/*code {\n    font-size: 75%;\n}*/\ntable {\n    font-size: 75%;\n}\nth {\n    padding-bottom: .7em;\n    padding-right: 1.8em;\n}\ntd {\n    padding-top: 0.2em;\n    padding-bottom: 0.2em;\n    padding-left: .2em;\n    padding-right: 1.8em;\n}\ntd.nums {\n}\n\nh2#download + h3 {\n    font-weight:bold;\n    text-decoration:none;\n    padding-left:70px;\n    background-repeat: no-repeat;\n    background-position: left;\n    height: 60px;\n    display:block;\n    line-height: 60px;\n    background-image: url(\"/img/download-base00.png\");\n    color:red;\n}\n\n@mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) \n{\n    * { color:$rebase0; }\n    body { background-color:$rebase03; }\n    h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }\n    h1#pagetitle, h1:first-of-type { color: $rebase1; }\n    h2#pagesubtitle, h2:first-of-type { color: $rebase01; }\n    a, a:active, a:visited { color: $rebase1; }\n    a:hover { background-color: $rebase02 }\n    header {\n        background-color: $rebase01;\n        color: $rebase1;\n        a.navlink, a:active.navlink, a:visited.navlink { color: $rebase1; }\n        a:hover.navlink { background: transparent; color: $rebase02; }\n        #sitelink { color: $rebase02; background-color: $rebase1 }\n        a:hover#sitelink { font-weight: bold; }\n    }\n    footer {\n        background-color: $rebase02;\n        color: $rebase01;\n    }\n    pre {\n        color: $rebase1;\n        background-color: $rebase02;\n    }\n    tr:nth-child(odd) { background-color:$rebase02 }\n    th { color:$rebase1; background-color:$rebase03; }\n    h1 a:hover {\n        -webkit-text-stroke: 3px $rebase02;\n    }\n    h2#download + h3 {\n        background-image: url(\"/img/download-base00.png\");\n        color:$rebase0;\n    }\n}\n\n@mixin accentize($accent) {\n    a#sitelink{ background-color:$accent; }\n    a, a:active, a:visited, code.url { color: $accent; }\n    h1 {color:$accent}\n    h2,h3,h4,h5,h6 {color:$accent}\n    h1#pagetitle, h1:first-of-type { color: $accent; }\n}\n\nhtml, html.light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}\nhtml.dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}\n\nhtml * {\n    color-profile: sRGB;\n    rendering-intent: auto;\n}\n\n//TODO> put tone accents in rebase .base03{ @include accentize($base03) }\nhtml.yellow, .yellow{\n    @include accentize($yellow);\n    h2#download + h3 {\n        background-image: url(\"/img/download-yellow.png\");\n        color:$yellow;\n    }\n}\nhtml.orange, .orange{\n    @include accentize($orange);\n    h2#download + h3 {\n        background-image: url(\"/img/download-orange.png\");\n        color:$orange;\n    }\n}\nhtml.red, .red{\n    @include accentize($red);\n    h2#download + h3 {\n        background-image: url(\"/img/download-red.png\");\n        color:$red;\n    }\n}\nhtml.magenta, .magenta{\n    @include accentize($magenta);\n    h2#download + h3 {\n        background-image: url(\"/img/download-magenta.png\");\n        color:$magenta;\n    }\n}\nhtml.violet, .violet{\n    @include accentize($violet);\n    h2#download + h3 {\n        background-image: url(\"/img/download-violet.png\");\n        color:$violet;\n    }\n}\nhtml.blue, .blue{\n    @include accentize($blue);\n    h2#download + h3 {\n        background-image: url(\"/img/download-blue.png\");\n        color:$blue;\n    }\n}\nhtml.cyan, .cyan{\n    @include accentize($cyan);\n    h2#download + h3 {\n        background-image: url(\"/img/download-cyan.png\");\n        color:$cyan;\n    }\n}\nhtml.green, .green{\n    @include accentize($green);\n    h2#download + h3 {\n        background-image: url(\"/img/download-green.png\");\n        color:$green;\n    }\n}\n\n// h1#pagetitle a, h1:first-of-type a,\n// h2#pagesubtitle a, h2:first-of-type a,\nh1 a, h2 a,\nh1 a:hover, h2 a:hover {\n    text-decoration: none;\n    background: none;\n}\n\n/* highlighting-kate */\n\n/* Based on kate's own default colors for Haskell */\npre.sourceCode, table.sourceCode, table.sourceCode * { font-family: monospace; }\ncode.sourceCode span.kw { color: $yellow; font-weight: bold; }\ncode.sourceCode span.dt { color: $cyan; }\ncode.sourceCode span.dv { color: $base01; }\ncode.sourceCode span.bn { color: $orange; }\ncode.sourceCode span.fl { color: $cyan; }\ncode.sourceCode span.ch { color: $red; }\ncode.sourceCode span.st { color: $magenta; }\ncode.sourceCode span.co { color: $base01; font-style: italic; }\ncode.sourceCode span.ot { }\ncode.sourceCode span.al { color: $green; font-weight: bold; }\ncode.sourceCode span.fu { color: $blue; }\ncode.sourceCode span.re { }\ncode.sourceCode span.er { color: $red; font-weight: bold; }\n\n\n/**\n * Non-semantic helper classes: please define your styles before this {{{\n */\n\n/* For image replacement */\n.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }\n\n/* Hide for both screenreaders and browsers:\n   css-discuss.incutio.com/wiki/Screenreader_Visibility */\n.hidden { display: none; visibility: hidden; }\n\n/* Hide only visually, but have it available for screenreaders: by Jon Neal.\n  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */\n.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }\n/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */\n.visuallyhidden.focusable:active,\n.visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }\n\n/* Hide visually and from screenreaders, but maintain layout */\n.invisible { visibility: hidden; }\n\n/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.\n   j.mp/bestclearfix */\n.clearfix:before, .clearfix:after { content: \"\\0020\"; display: block; height: 0; overflow: hidden; }\n.clearfix:after { clear: both; }\n/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */\n.clearfix { zoom: 1; }\n\n\n\n/**\n * Media queries for responsive design.\n *\n * These follow after primary styles so they will successfully override.\n */\n\n@media all and (orientation:portrait) {\n  /* Style adjustments for portrait mode goes here */\n\n}\n\n@media all and (orientation:landscape) {\n  /* Style adjustments for landscape mode goes here */\n\n}\n\n/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)\n   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */\n@media screen and (max-device-width: 480px) {\n\n\n  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */\n  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */\n}\n\n\n/**\n * Print styles.\n *\n * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/\n */\n@media print {\n  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;\n  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */\n  a, a:visited { color: #444 !important; text-decoration: underline; }\n  a[href]:after { content: \" (\" attr(href) \")\"; }\n  abbr[title]:after { content: \" (\" attr(title) \")\"; }\n  .ir a:after, a[href^=\"javascript:\"]:after, a[href^=\"#\"]:after { content: \"\"; }  /* Don't show links for images, or javascript/internal links */\n  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }\n  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */\n  tr, img { page-break-inside: avoid; }\n  @page { margin: 0.5cm; }\n  p, h2, h3 { orphans: 3; widows: 3; }\n  h2, h3{ page-break-after: avoid; }\n}\n\n// }}}",
+			"settings":
+			{
+				"buffer_size": 16940,
+				"line_ending": "Windows",
+				"name": "/**"
+			}
+		},
+		{
+			"file": "/C/private_code/appendSecurity.rb",
+			"settings":
+			{
+				"buffer_size": 833,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "homework1/part1.rb",
+			"settings":
+			{
+				"buffer_size": 1371,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "homework2/part1.rb",
+			"settings":
+			{
+				"buffer_size": 443,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test/test_part2_1.rb",
+			"settings":
+			{
+				"buffer_size": 1395,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Close"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"bookma",
+				"Bookmarks: Select All"
+			],
+			[
+				"book",
+				"Bookmarks: Select Next"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"new",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"align",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment Key Bindings – User"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reide",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ident",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"packa insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Discover Packages"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"",
+				"Snippet: html"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 129.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/code/SaaS-class/homework1/part5.rb",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/code/SaaS-class/homework2/Message",
+		"/C/code/SaaS-class/homework2/test_non_array_non_hash_enumerable(TestMetaprogramming)",
+		"/C/code/SaaS-class/homework2/    C",
+		"/C/private_code/web.xml",
+		"/C/private_code/featurephone/src/templates/war/web.xml",
+		"/C/private_code/WALT-note.txt",
+		"/C/Users/katkost/Downloads/Config.groovy",
+		"/C/Users/katkost/Downloads/Config (1).groovy",
+		"/C/private_code/featurephone/grails-app/views/news/_photos.gsp",
+		"/C/private_code/featurephone/grails-app/views/news/_videos.gsp",
+		"/C/private_code/featurephone/grails-app/views/news/_blogs.gsp",
+		"/C/private_code/featurephone/web-app/css/stylesheet.css",
+		"/C/Users/katkost/Music/Slackbaba - ...And The Beat Goes Om....cue",
+		"/C/Users/katkost/Music/Slackbaba - ...And The Beat Goes Om....mp3",
+		"/C/private_code/featurephone/grails-app/views/news/_news.gsp",
+		"/C/private_code/featurephone/grails-app/views/layouts/stylesheet.css",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/BuildConfig.groovy",
+		"/C/code/SaaS-class/homework1/part1.rb",
+		"/C/code/SaaS-class/homework1/part3.rb",
+		"/C/code/SaaS-class/homework2/part1.rb",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/Alignment/readme.creole",
+		"/C/private_code/GrailsWaltExampleProject/grails-app/conf/BuildConfig.groovy",
+		"/C/private_code/featurephone/grails-app/views/news/_header.gsp",
+		"/C/private_code/featurephone/grails-app/views/news/_navigation.gsp.html",
+		"/C/private_code/featurephone/grails-app/views/news/_footer.gsp",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/katkost/AppData/Local/Temp/auxiliary",
+		"/C/code/SaaS-class/homework1/part4.rb",
+		"/C/code/NotepadCodeLab/Notepadv2Solution/src/com/android/demo/notepad2/Notepadv2.java",
+		"/C/code/NotepadCodeLab/Notepadv2Solution/src/com/android/demo/notepad2/NoteEdit.java",
+		"/C/code/SaaS-class/homework1/part2.rb",
+		"/C/code/NotepadCodeLab/Notepadv2Solution/AndroidManifest.xml",
+		"/C/code/SaaS-class/homework1/    C",
+		"/C/private_code/appendSecurity.py",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/src/templates/war/web.xml",
+		"/C/private_code/appendSecurity.rb",
+		"/C/private_code/<?xmlversion=\"1.0\"encoding=\"UTF-8\"?><web-appversion=\"2.5\"metadata-complete=\"true\"xmlns=\"http",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/views/layouts/stylesheet.css",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/ApplicationResources.groovy",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/html/news-home.html",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/html/stylesheet.css",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/Config.groovy",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/DataSource.groovy",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/BootStrap.groovy",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/grails-app/conf/UrlMappings.groovy",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/html/match-calendar.html",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/html/index.html",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/html/Matches&results.html",
+		"/C/code/NotepadCodeLab/Notepadv2Solution/src/com/android/demo/notepad2/NotesDbAdapter.java",
+		"/C/code/recursion.rb",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/stylesheet.css",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/index.html",
+		"/C/private_code/svn_espn_football_cup/featurephone/trunk/index.xhtml",
+		"/C/code/SaaS-class/homework1/test_count_doo(TC_MyTest)",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/staging/filter.xsl",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/production/filter.xsl",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/dev/filter.xsl",
+		"/C/Users/katkost/workspace/RemoteSystemsTempFiles/LOCALHOST/c/private_code/idcs-getjar/testLog.log",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/default/filter.xsl",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/test/filter.xsl",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/test/getjar.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/dev/getjar.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/production/getjar.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/staging/getjar.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/default/getjar.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/dev/mappingCategory.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/default/devices.xml",
+		"/C/private_code/idcs-getjar/target/test-classes/devices.xml",
+		"/C/private_code/propeties_changer/changer.py",
+		"/C/private_code/propeties_changer/newMappingCategory.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/default/mappingCategory.properties",
+		"/C/private_code/idcs-getjar/src/main/webapp/WEB-INF/conf/test/mappingCategory.properties",
+		"/C/private_code/idcs-getjar/src/test/resources/devices.xml",
+		"/C/private_code/propeties_changer/mappingCategory.properties",
+		"/C/private_code/idcs-getjar/target/getjar/WEB-INF/conf/default/mappingCategory.properties",
+		"/C/tmp/idcs-getjar-20120201.log",
+		"/C/Program Files/apache-tomcat-6.0.32/conf/catalina.properties",
+		"/C/tmp/idcs-getjar-20120131.log",
+		"/C/private_code/ligrql/.gitignore",
+		"/C/private_code/idcs-viacom/src/main/webapp/WEB-INF/conf/demo/sessionFilter.properties",
+		"/C/private_code/idcs-getjar/target/getjar/WEB-INF/web.xml",
+		"/C/private_code/idcs-getjar/target/getjar/WEB-INF/conf/production/getjar.properties",
+		"/C/private_code/mup/mup/src/main/java/com/ixonos/mup/servlet/FacebookLoginServlet.java",
+		"/C/private_code/mup/mup/src/test/java/com/ixonos/mup/servlet/FacebookLoginServletTest.java",
+		"/C/private_code/mup/mup/target/test-classes/sessionFilter.properties",
+		"/C/tmp/idcs-getjar-20120118.log",
+		"/C/private_code/idcs-getjar/target/test-classes/htc.xml",
+		"/C/private_code/idcs-getjar/target/test-classes/lg.xml",
+		"/C/private_code/mup/mup/src/test/java/com/ixonos/mup/core/MockServer.java",
+		"/C/private_code/idcs-getjar/src/test/java/com/ixonos/idcs/getjar/dao/ProxyStateDaoTest.java",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/Default/Global.sublime-settings",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/Default/Base File.sublime-settings",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/Users/katkost/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/private_code/idcs-getjar/src/main/java/com/ixonos/idcs/getjar/GetJarJob.java"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"walt.source.image.prefx.path",
+			"&base",
+			"+a",
+			"add",
+			"Panama",
+			")",
+			"\\\\ ",
+			"/all",
+			"props",
+			"setupProxyHttp",
+			"ctrl+r"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			" "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 16940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5134,
+								5134
+							]
+						],
+						"settings":
+						{
+							"auto_name": "/**",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2538.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/private_code/appendSecurity.rb",
+					"settings":
+					{
+						"buffer_size": 833,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 36.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "homework1/part1.rb",
+					"settings":
+					{
+						"buffer_size": 1371,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "homework2/part1.rb",
+					"settings":
+					{
+						"buffer_size": 443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								443,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "test/test_part2_1.rb",
+					"settings":
+					{
+						"buffer_size": 1395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								455,
+								455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.635211267606,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 209.0
+	},
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"part1",
+				"SaaS-class/homework2/part1.rb"
+			],
+			[
+				"web.xml",
+				"featurephone/src/templates/war/web.xml"
+			],
+			[
+				"build",
+				"/C/private_code/GrailsWaltExampleProject/grails-app/conf/BuildConfig.groovy"
+			],
+			[
+				"part3",
+				"SaaS-class/homework1/part3.rb"
+			],
+			[
+				"part4",
+				"SaaS-class/homework1/part4.rb"
+			],
+			[
+				"part2",
+				"SaaS-class/homework1/part2.rb"
+			],
+			[
+				"part",
+				"SaaS-class/homework1/part2.rb"
+			],
+			[
+				"we",
+				"src/templates/war/web.xml"
+			],
+			[
+				"web",
+				"src/templates/war/web.xml"
+			],
+			[
+				"styl",
+				"grails-app/views/layouts/stylesheet.css"
+			],
+			[
+				"style",
+				"html/stylesheet.css"
+			],
+			[
+				"devices.",
+				"idcs-getjar/src/test/resources/devices.xml"
+			],
+			[
+				"device",
+				"idcs-getjar/target/test-classes/devices.xml"
+			],
+			[
+				"mapping",
+				"idcs-getjar/src/main/webapp/WEB-INF/conf/test/mappingCategory.properties"
+			],
+			[
+				"mapp",
+				"idcs-getjar/src/main/webapp/WEB-INF/conf/default/mappingCategory.properties"
+			],
+			[
+				"mappingca",
+				"idcs-getjar/src/main/webapp/WEB-INF/conf/default/mappingCategory.properties"
+			],
+			[
+				"sessionfilter.pro",
+				"idcs-viacom/src/main/webapp/WEB-INF/conf/demo/sessionFilter.properties"
+			],
+			[
+				"web.xm",
+				"idcs-getjar/target/getjar/WEB-INF/web.xml"
+			],
+			[
+				"getjar.proper",
+				"idcs-getjar/target/getjar/WEB-INF/conf/production/getjar.properties"
+			],
+			[
+				"getjar.pro",
+				"idcs-getjar/src/main/webapp/WEB-INF/conf/staging/getjar.properties"
+			],
+			[
+				"face",
+				"mup/mup/src/main/java/com/ixonos/mup/servlet/FacebookLoginServlet.java"
+			],
+			[
+				"sess",
+				"idcs-viacom/src/main/webapp/WEB-INF/conf/demo/sessionFilter.properties"
+			],
+			[
+				"lg.xm",
+				"idcs-getjar/target/test-classes/lg.xml"
+			],
+			[
+				"htc.xml",
+				"idcs-getjar/target/test-classes/htc.xml"
+			],
+			[
+				"mockser",
+				"mup/mup/src/test/java/com/ixonos/mup/core/MockServer.java"
+			],
+			[
+				"sesssion",
+				"mup/mup/target/test-classes/sessionFilter.properties"
+			],
+			[
+				"facebooktest",
+				"mup/mup/src/test/java/com/ixonos/mup/servlet/FacebookLoginServletTest.java"
+			],
+			[
+				"facetest",
+				"mup/mup/src/test/java/com/ixonos/mup/servlet/FacebookLoginServletTest.java"
+			],
+			[
+				"proxystatedaot",
+				"src/test/java/com/ixonos/idcs/getjar/dao/ProxyStateDaoTest.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 174.0,
+	"status_bar_visible": true
+}
