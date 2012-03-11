@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -wKU
+
 require 'test/unit'
 require '../homework2/part1'
 
@@ -42,7 +43,7 @@ class TestMetaprogramming < Test::Unit::TestCase
   end
 
   def test_foo_palindrome
-    #assert Foo.new(1,9).palindrome?
+    assert !Foo.new(1,9).palindrome?
   end
 
   def test_currency_conversion
@@ -59,9 +60,14 @@ class TestMetaprogramming < Test::Unit::TestCase
 end
 
 class Foo
+  include Enumerable
+  
+  def each
+    @a.each{|val| yield val}    
+  end
+
   def initialize(first, second)
-    @a = first
-    @b = second
+    @a = Range.new(first, second)
   end
 end
 
