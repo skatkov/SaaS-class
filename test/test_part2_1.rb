@@ -56,9 +56,6 @@ class TestMetaprogramming < Test::Unit::TestCase
     assert_equal 10 * 0.019 / 1.292, 10.rupees.in(:euro)
     assert_equal 1 * 1.292, 1.euro.in(:dollar)
   end
-
-
-
 end
 
 class Foo
